@@ -75,10 +75,11 @@ Download the proect, unpack it anywhere in your harddrive. Then, navigate the ja
 	});
 
 # New feed selection
-describe('New Feed Selection', function() {
 
-    let feedA,
-        feedB;
+	describe('New Feed Selection', function() {
+
+	let feedA,
+	feedB;
 
     beforeEach(function(done) {
         loadFeed(0, function() {
