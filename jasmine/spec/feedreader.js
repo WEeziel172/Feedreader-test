@@ -27,7 +27,7 @@ $(function() {
         });
 
 
-        /* TODO: Write a test that loops through each feed
+        /* Test that loops through each feed
          * in the allFeeds object and ensures it has a URL defined
          * and that the URL is not empty.
          */
@@ -74,7 +74,7 @@ $(function() {
         });
     });
 	
-    /* TODO: Write a new test suite named "Initial Entries" */
+    /* Test suite named "Initial Entries" */
 
 	describe('Initial Entries', function () {
 		
@@ -107,26 +107,26 @@ $(function() {
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
-		 
-describe('New Feed Selection', function() {
 
-    let feedA,
-        feedB;
-
-    beforeEach(function(done) {
-        loadFeed(0, function() {
-            feedA = document.querySelector('.feed').innerHTML;
-        });
-
-        loadFeed(1, function() {
-            feedB = document.querySelector('.feed').innerHTML;
-            done();
-        });
+		
+	describe('New Feed Selection', function() {
+		let feedA,
+			feedB;
+		beforeEach(function(done) {
+		loadFeed(0, function() {
+			// feed 0 done loading
+		feedA = document.querySelector('.feed').innerHTML;
+		loadFeed(1, function(){
+			// feed 1 done loading
+			feedB =  document.querySelector('.feed').innerHTML;
+      // all variables initialized, can begin tests
+      done();
     });
-
+  });
+});
     it('this loads new feeds', function(done) {
         expect(feedB !== feedA).toBe(true);
         done();
     });
-});
-}());
+	});
+	}());
