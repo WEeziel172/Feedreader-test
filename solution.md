@@ -73,25 +73,24 @@ This file is intended as a solution file. Check the code comments if something s
 # New feed selection
 
 	describe('New Feed Selection', function() {
-
-	let feedA,
-	feedB;
-
-    beforeEach(function(done) {
-        loadFeed(0, function() {
-            feedA = document.querySelector('.feed').innerHTML;
-        });
-
-        loadFeed(1, function() {
-            feedB = document.querySelector('.feed').innerHTML;
-            done();
-        });
+		let feedA,
+			feedB;
+		beforeEach(function(done) {
+		loadFeed(0, function() {
+			// feed 0 done loading
+		feedA = document.querySelector('.feed').innerHTML;
+		loadFeed(1, function(){
+			// feed 1 done loading
+			feedB =  document.querySelector('.feed').innerHTML;
+      // all variables initialized, can begin tests
+      done();
     });
-
+  });
+});
     it('this loads new feeds', function(done) {
         expect(feedB !== feedA).toBe(true);
         done();
     });
-});
-}());
+	});
+	}());
 
