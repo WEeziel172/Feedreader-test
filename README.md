@@ -7,7 +7,7 @@ Download the proect, unpack it anywhere in your harddrive. Then, navigate the ja
 
 # Testing names and URLs
 
-        /* Write a test that loops through each feed
+        /* Test that loops through each feed
          * in the allFeeds object and ensures it has a URL defined
          * and that the URL is not empty.
          */
@@ -20,7 +20,7 @@ Download the proect, unpack it anywhere in your harddrive. Then, navigate the ja
 		});
 		
 
-        /* test that loops through each feed
+        /* Test that loops through each feed
          * in the allFeeds object and ensures it has a name defined
          * and that the name is not empty.
          */
